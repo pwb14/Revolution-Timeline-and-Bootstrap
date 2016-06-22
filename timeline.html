@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Revolutionary War Timeline</title>
+	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+   <script>
+   $( document ).ready(function() {
+    loadDoc();
+});
+        function loadDoc() {
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (xhttp.readyState == 4 && xhttp.status == 200) {
+                setData(xhttp);
+            }
+          };
+          xhttp.open("GET", "timeline.xml", true);
+          xhttp.send();
+        }
+       function setData(xml){
+            var titleTxt,titlex,paraTxt,parax,imageTxt,imagex,dateTxt,datex;
+            var xmlDoc = xml.responseXML;
+            titleTxt="";
+            paraTxt="";
+            imageTxt="";
+            dateTxt="";
+            titlex=xmlDoc.getElementsByTagName("title"); 
+            parax=xmlDoc.getElementsByTagName("desc");
+            imagex=xmlDoc.getElementsByTagName("img");
+            datex=xmlDoc.getElementsByTagName("date");
+           
+           $(".DocumentItem").click(function(){
+               var id = $(this).attr('id');
+               
+               titleTxt= titlex[id].firstChild.nodeValue;
+               paraTxt= parax[id].firstChild.nodeValue;
+               imageTxt= imagex[id].firstChild.nodeValue;
+               dateTxt= datex[id].firstChild.nodeValue;
+               document.getElementById("inputh").innerHTML=titleTxt;
+               document.getElementById("inputp").innerHTML=paraTxt;
+               document.getElementById("inputd").innerHTML=dateTxt;
+               document.getElementById("inputimg").innerHTML="<img id='images' src='"+imageTxt+"'>";
+               
+           });
+           $(function() {
+
+                $("#timeline").mousewheel(function(event, delta) {
+                this.scrollLeft -= (delta * 30);
+                event.preventDefault();
+
+            });
+
+});
+       }
+    
+       
+</script>
+</head>
+<body>
+
+<div class="container container-table">
+    <div class="row vertical-center-row">
+        <!-- <div class="text-center col-md-4 col-md-offset-4" style="background:red">TEXT</div> -->
+        <div id="inputimg" class="col-sm-6">
+        
+          	
+    	</div>
+    	<div class="col-sm-6">
+            <h3 id="inputd"></h3>
+      		<h3 id="inputh">Click on an event in the timeline</h3>
+      		<p id="inputp"></p>
+      		
+    	</div>
+
+    </div>
+</div>
+
+<div class="container" id="timeline">
+<div class="row">
+<div class="DocumentList">
+<div class="row">
+<ul class="list-inline">
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem southern" id="84"><span>British Capture Savannah</span></li>
+    
+    <li class="DocumentItem southern"><span>&nbsp;</span></li>
+    <li class="DocumentItem southern"><span>&nbsp;</span></li>
+    <li class="DocumentItem southern"><span>&nbsp;</span></li>
+    <li class="DocumentItem southern"><span>&nbsp;</span></li>
+    <li class="DocumentItem southern"><span>&nbsp;</span></li>
+    <li class="DocumentItem southern"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem southern"><span>&nbsp;</span></li>
+    <li class="DocumentItem southern"><span>&nbsp;</span></li>
+    <li class="DocumentItem southern"><span>&nbsp;</span></li>
+    <li class="DocumentItem southern"><span>&nbsp;</span></li>
+    <li class="DocumentItem southern"><span>&nbsp;</span></li>
+    <li class="DocumentItem southern"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem southern"><span>&nbsp;</span></li>
+    <li class="DocumentItem southern"><span>&nbsp;</span></li>
+    <li class="DocumentItem southern"><span>&nbsp;</span></li>
+    <li class="DocumentItem southern"><span>&nbsp;</span></li>
+    <li class="DocumentItem southern"><span>&nbsp;</span></li>
+    <li class="DocumentItem southern"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem southern"><span>&nbsp;</span></li>
+    <li class="DocumentItem southern"><span>&nbsp;</span></li>
+    <li class="DocumentItem southern"><span>&nbsp;</span></li>
+    <li class="DocumentItem southern"><span>&nbsp;</span></li>
+    <li class="DocumentItem southern"><span>&nbsp;</span></li>
+    <li class="DocumentItem southern"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem southern" id="85"><span>Seige of Charleston</span></li>
+    <li class="DocumentItem southern" id="86"><span>Buford's Massacre</span></li>
+    <li class="DocumentItem southern" id="87"><span>Clinton Pardons Malitia</span></li>
+    <li class="DocumentItem southern" id="88"><span>Clinton Abolishes Parole</span></li>
+    <li class="DocumentItem southern" id="89"><span>Clinton Congratulated</span></li>
+    <li class="DocumentItem southern" id="90"><span>Battle of Camden</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+</ul>
+</div>
+
+<div class="row">
+<ul class="list-inline">
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem indians" id="77"><span>Cherokees Attack Frontier</span></li>
+    <li class="DocumentItem indians" id="78"><span>Lyndley's Fort</span></li>
+    <li class="DocumentItem indians" id="79"><span>Cherokees Ambush Williamson</span></li>
+    <li class="DocumentItem indians" id="80"><span>Pickens Holds Off Cherokees</span></li>
+    <li class="DocumentItem indians" id="81"><span>Cherokees Defeated</span></li>
+    <li class="DocumentItem indians" id="82"><span>Cherokee Town Burned</span></li>
+    
+    <li class="DocumentItem indians"><span>&nbsp;</span></li>
+    <li class="DocumentItem indians"><span>&nbsp;</span></li>
+    <li class="DocumentItem indians" id="83"><span>Cherokees Surrender</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+</ul>
+</div>
+
+<div class="row">
+<ul class="list-inline">
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem townsend" id="25"><span>Townsend Act Passed</span></li>
+	<li class="DocumentItem townsend"><span>&nbsp;</span></li>
+    <li class="DocumentItem townsend" id="26"><span>Ships Begin to be Seized</span></li>
+    <li class="DocumentItem townsend" id="27"><span>Laurens and Leigh Pamphlets</span></li>
+	<li class="DocumentItem townsend"><span>&nbsp;</span></li>
+	<li class="DocumentItem townsend"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem townsend" id="28"><span>Pleas for Townsend Repeal</span></li>
+    <li class="DocumentItem townsend"><span>&nbsp;</span></li>
+    <li class="DocumentItem townsend"><span>&nbsp;</span></li>
+	<li class="DocumentItem townsend"><span>&nbsp;</span></li>
+	<li class="DocumentItem townsend"><span>&nbsp;</span></li>
+    <li class="DocumentItem townsend" id="29"><span>Assembly Dissolved</span></li>
+    
+    <li class="DocumentItem townsend"><span>&nbsp;</span></li>
+	<li class="DocumentItem townsend"><span>&nbsp;</span></li>
+	<li class="DocumentItem townsend"><span>&nbsp;</span></li>
+    <li class="DocumentItem townsend" id="30"><span>Non-Importation Outlined</span></li>
+	<li class="DocumentItem townsend"><span>&nbsp;</span></li>
+	<li class="DocumentItem townsend"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem townsend"><span>&nbsp;</span></li>
+    <li class="DocumentItem townsend"><span>&nbsp;</span></li>
+	<li class="DocumentItem townsend"><span>&nbsp;</span></li>
+	<li class="DocumentItem townsend"><span>&nbsp;</span></li>
+	<li class="DocumentItem townsend"><span>&nbsp;</span></li>
+    <li class="DocumentItem townsend" id="31"><span>Colonial Unity Breaks Down</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem tea" id="32"><span>Merchants Refuse to Sell Tea</span></li>
+    <li class="DocumentItem tea" id="33"><span>1st Chamber of Commerce</span></li>
+    
+    <li class="DocumentItem tea" id="34"><span>Tea Shipment Seized</span></li>
+    <li class="DocumentItem tea"><span>&nbsp;</span></li>
+    <li class="DocumentItem tea" id="35"><span>Boston Harbor Closed</span></li>
+    <li class="DocumentItem tea" id="36"><span>Charleston Aids Boston</span></li>
+    <li class="DocumentItem tea" id="37"><span>Tea Dumped in Charleston</span></li>
+    <li class="DocumentItem tea" id="38"><span>Non-Importation in Effect</span></li>
+    
+    <li class="DocumentItem provincial" id="59"><span>Provincial Congress Formed</span></li>
+	<li class="DocumentItem provincial"><span>&nbsp;</span></li>
+    <li class="DocumentItem provincial" id="60"><span>Congress Vows to Fight</span></li>
+    <li class="DocumentItem provincial" id="61"><span>Royal Governor Arrives</span></li>
+    <li class="DocumentItem provincial" id="62"><span>Drayton Leads Congress</span></li>
+    <li class="DocumentItem provincial" id="63"><span>Drayton Warns British</span></li>
+    
+    <li class="DocumentItem provincial" id="64"><span>Congress Forms Constitution</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+</ul>
+</div>
+
+<div class="row">
+<ul class="list-inline">
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem stamps" id="11"><span>Stamp Tax in SC</span></li>
+    <li class="DocumentItem stamps"><span>&nbsp;</span></li>
+	<li class="DocumentItem stamps"><span>&nbsp;</span></li>
+    <li class="DocumentItem stamps" id="12"><span>Unity Against Stamp Act</span></li>
+    <li class="DocumentItem stamps" id="13"><span>Gadsden's Critical Report</span></li>
+    
+    <li class="DocumentItem stamps" id="14"><span>Shipping Disrupted</span></li>
+    <li class="DocumentItem stamps" id="15"><span>Stamp Act Repealed</span></li>
+    <li class="DocumentItem stamps" id="16"><span>Charleston Celebrates Repeal</span></li>
+    <li class="DocumentItem stamps" id="17"><span>King George Praised</span></li>
+	<li class="DocumentItem stamps"><span>&nbsp;</span></li>
+	<li class="DocumentItem stamps"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem stamps"><span>&nbsp;</span></li>
+    <li class="DocumentItem stamps"><span>&nbsp;</span></li>
+	<li class="DocumentItem stamps"><span>&nbsp;</span></li>
+	<li class="DocumentItem stamps"><span>&nbsp;</span></li>
+	<li class="DocumentItem stamps"><span>&nbsp;</span></li>
+	<li class="DocumentItem stamps"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem stamps"><span>&nbsp;</span></li>
+	<li class="DocumentItem stamps"><span>&nbsp;</span></li>
+	<li class="DocumentItem stamps"><span>&nbsp;</span></li>
+	<li class="DocumentItem stamps"><span>&nbsp;</span></li>
+	<li class="DocumentItem stamps"><span>&nbsp;</span></li>
+	<li class="DocumentItem stamps"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem stamps"><span>&nbsp;</span></li>
+    <li class="DocumentItem stamps"><span>&nbsp;</span></li>
+	<li class="DocumentItem stamps"><span>&nbsp;</span></li>
+	<li class="DocumentItem stamps"><span>&nbsp;</span></li>
+	<li class="DocumentItem stamps"><span>&nbsp;</span></li>
+	<li class="DocumentItem stamps"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem stamps"><span>&nbsp;</span></li>
+    <li class="DocumentItem stamps"><span>&nbsp;</span></li>
+    <li class="DocumentItem stamps"><span>&nbsp;</span></li>
+	<li class="DocumentItem stamps"><span>&nbsp;</span></li>
+	<li class="DocumentItem stamps"><span>&nbsp;</span></li>
+	<li class="DocumentItem stamps"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem stamps"><span>&nbsp;</span></li>
+	<li class="DocumentItem stamps"><span>&nbsp;</span></li>
+    <li class="DocumentItem stamps" id="18"><span>Charleston's Statue of Pitt</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem prep" id="51"><span>British Enforce Policies</span></li>
+    <li class="DocumentItem prep" id="52"><span>Fighting in Massachusetts</span></li>
+    <li class="DocumentItem prep" id="53"><span>Council of Safety Formed</span></li>
+    <li class="DocumentItem prep" id="54"><span>Royal Governor Flees</span></li>
+    <li class="DocumentItem prep" id="55"><span>Ships Exchange Fire</span></li>
+    
+    <li class="DocumentItem prep" id="56"><span>New Flag Presented</span></li>
+    <li class="DocumentItem prep"><span>&nbsp;</span></li>
+    <li class="DocumentItem prep" id="57"><span>Clinton's Fleet Arrives</span></li>
+    <li class="DocumentItem prep" id="58"><span>Patriots Defend Charleston</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem end" id="100"><span>Battle of King's Mountain</span></li>
+    <li class="DocumentItem end" id="101"><span>Nathaniel Greene</span></li>
+    
+    <li class="DocumentItem end" id="102"><span>Battle of Cowpens</span></li>
+    <li class="DocumentItem end" id="103"><span>Battle of Guilford Courthouse</span></li>
+    <li class="DocumentItem end" id="104"><span>British Evacuate Georgetown</span></li>
+    <li class="DocumentItem end"><span>&nbsp;</span></li>
+    <li class="DocumentItem end" id="105"><span>Cornwallis Surrenders</span></li>
+    <li class="DocumentItem end" id="106"><span>Loyalists Protected</span></li>
+    
+    <li class="DocumentItem end"><span>&nbsp;</span></li>
+    <li class="DocumentItem end" id="107"><span>British Call for Peace</span></li>
+    <li class="DocumentItem end"><span>&nbsp;</span></li>
+    <li class="DocumentItem end" id="108"><span>Negotiations Begin</span></li>
+    <li class="DocumentItem end" id="109"><span>Preliminary Agreement Signed</span></li>
+    <li class="DocumentItem end" id="110"><span>British Evacuate</span></li>
+    
+    <li class="DocumentItem end" id="111"><span>Armistice Reached</span></li>
+    <li class="DocumentItem end"><span>&nbsp;</span></li>
+    <li class="DocumentItem end"><span>&nbsp;</span></li>
+    <li class="DocumentItem end"><span>&nbsp;</span></li>
+    <li class="DocumentItem end" id="112"><span>Peace Treaty Signed</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    
+</ul>
+</div>
+
+<div class="row">
+<ul class="list-inline">
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem wilkes" id="4"><span>John Wilkes Jailed</span></li>
+    <li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+    <li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+    <li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+    <li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem wilkes" id="5"><span>Pitt's Plea Fails</span></li>
+    <li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+    <li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+    <li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+    <li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+    <li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+	<li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+	<li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+	<li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+	<li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+	<li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+	<li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+	<li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+	<li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+	<li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+	<li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+	<li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+	<li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+	<li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+	<li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+	<li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+    <li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+    <li class="DocumentItem wilkes" id="6"><span>Wilkes Expelled</span></li>
+    <li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+    <li class="DocumentItem wilkes" id="7"><span>Wilkes' No. 45</span></li>
+    <li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+	<li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+	<li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+	<li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+	<li class="DocumentItem wilkes"><span>&nbsp;</span></li>
+    <li class="DocumentItem wilkes" id="8"><span>Wilkes' Defense</span></li>
+    
+    <li class="DocumentItem wilkes" id="9"><span>Wilkes is Released</span></li>
+    <li class="DocumentItem wilkes" id="10"><span>SC Assembly Denied Rights</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem meetings" id="39"><span>1st Anti-Tea General Meeting</span></li>
+    
+    <li class="DocumentItem meetings"><span>&nbsp;</span></li>
+    <li class="DocumentItem meetings"><span>&nbsp;</span></li>
+	<li class="DocumentItem meetings"><span>&nbsp;</span></li>
+    <li class="DocumentItem meetings" id="40"><span>1st Congressional Delegates</span></li>
+    <li class="DocumentItem meetings" id="41"><span>Minister Dismissed</span></li>
+    <li class="DocumentItem meetings" id="42"><span>Middleton Leads Congress</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem loyalty" id="46"><span>Battle at Ninety-Six</span></li>
+    <li class="DocumentItem loyalty" id="48"><span>Patriots Capture Loyalists</span></li>
+        
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem state" id="65"><span>State Constitution Adopted</span></li>
+	<li class="DocumentItem state"><span>&nbsp;</span></li>
+    <li class="DocumentItem state" id="66"><span>Independence Declared</span></li>
+    <li class="DocumentItem state" id="67"><span>Charleston Celebrates</span></li>
+	<li class="DocumentItem state"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem state"><span>&nbsp;</span></li>
+    <li class="DocumentItem state"><span>&nbsp;</span></li>
+	<li class="DocumentItem state"><span>&nbsp;</span></li>
+    <li class="DocumentItem state" id="68"><span>Tennent Dies</span></li>
+	<li class="DocumentItem state"><span>&nbsp;</span></li>
+    <li class="DocumentItem state" id="69"><span>Laurens Elected President</span></li>
+        
+    <li class="DocumentItem state" id="70"><span>Rutledge Resigns</span></li>
+    <li class="DocumentItem state" id="71"><span>Anglican Church Dissolved</span></li>
+    <li class="DocumentItem state" id="72"><span>Constitutional Loyalty Oath</span></li>
+    <li class="DocumentItem state" id="73"><span>Gadsden Fights Duel</span></li>
+	<li class="DocumentItem state"><span>&nbsp;</span></li>
+	<li class="DocumentItem state"><span>&nbsp;</span></li> 
+        
+    <li class="DocumentItem state" id="74"><span>Rutledge Elected Governor</span></li>
+    <li class="DocumentItem state"><span>&nbsp;</span></li>
+    <li class="DocumentItem state"><span>&nbsp;</span></li>
+	<li class="DocumentItem state"><span>&nbsp;</span></li>
+    <li class="DocumentItem state" id="75"><span>Drayton Dies</span></li>
+	<li class="DocumentItem state"><span>&nbsp;</span></li>
+        
+    <li class="DocumentItem state" id="76"><span>Charleston Prepares Defenses</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem partisan" id="95"><span>Partisans Continue Fighting</span></li>
+    <li class="DocumentItem partisan" id="96"><span>Battle of Rocky Mount</span></li>
+    <li class="DocumentItem partisan" id="97"><span>Prisoners Freed</span></li>
+    <li class="DocumentItem partisan" id="98"><span>Battle of Black Mingo</span></li>
+    
+    <li class="DocumentItem partisan"><span>&nbsp;</span></li>
+    <li class="DocumentItem partisan" id="99"><span>Battle of Wiboo Swamp</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+    
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+    <li class="DocumentItem"><span>&nbsp;</span></li>
+	<li class="DocumentItem"><span>&nbsp;</span></li>
+        
+
+</ul>
+</div>
+
+<div class="row">
+<ul class="list-inline">
+	<li class="DocumentItem cherokee" id="0"><span>Incident Touches off War</span></li>
+	<li class="DocumentItem cherokee">&nbsp;</li>
+	<li class="DocumentItem cherokee"  id="1"><span>British Army Arrives</span></li>
+	<li class="DocumentItem cherokee">&nbsp;</li>
+	<li class="DocumentItem cherokee">&nbsp;</li>
+	<li class="DocumentItem cherokee">&nbsp;</li>
+    
+	<li class="DocumentItem cherokee">&nbsp;</li>
+	<li class="DocumentItem cherokee" id="2"><span>British Send Troops Again</span></li>
+	<li class="DocumentItem cherokee">&nbsp;</li>
+	<li class="DocumentItem cherokee">&nbsp;</li>
+	<li class="DocumentItem cherokee">&nbsp;</li>
+    <li class="DocumentItem cherokee">&nbsp;</li>
+    
+    <li class="DocumentItem cherokee">&nbsp;</li>
+	<li class="DocumentItem cherokee">&nbsp;</li>
+    <li class="DocumentItem cherokee">&nbsp;</li>
+    <li class="DocumentItem cherokee">&nbsp;</li>
+	<li class="DocumentItem cherokee">&nbsp;</li>
+    <li class="DocumentItem cherokee">&nbsp;</li>
+    
+	<li class="DocumentItem cherokee" id="3"><span>War Doubles Britain&#39;s Debt</span></li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+    
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem sons" id="19"><span>Liberty or Death</span></li>
+    <li class="DocumentItem sons">&nbsp;</li>
+    <li class="DocumentItem sons" id="20"><span>Mobs Discourage Stamps</span></li>
+    <li class="DocumentItem sons">&nbsp;</li>
+    
+    <li class="DocumentItem sons">&nbsp;</li>
+    <li class="DocumentItem sons">&nbsp;</li>
+    <li class="DocumentItem sons">&nbsp;</li>
+    <li class="DocumentItem sons">&nbsp;</li>
+    <li class="DocumentItem sons" id="21"><span>Calls for Independence</span></li>
+    <li class="DocumentItem sons">&nbsp;</li>
+    
+    <li class="DocumentItem sons">&nbsp;</li>
+    <li class="DocumentItem sons">&nbsp;</li>
+    <li class="DocumentItem sons">&nbsp;</li>
+    <li class="DocumentItem sons" id="22"><span>Non-Importation Plan</span></li>
+    <li class="DocumentItem sons">&nbsp;</li>
+    <li class="DocumentItem sons">&nbsp;</li>
+    
+    <li class="DocumentItem sons">&nbsp;</li>
+    <li class="DocumentItem sons">&nbsp;</li>
+    <li class="DocumentItem sons">&nbsp;</li>
+    <li class="DocumentItem sons">&nbsp;</li>
+    <li class="DocumentItem sons">&nbsp;</li>
+    <li class="DocumentItem sons">&nbsp;</li>
+    
+    <li class="DocumentItem sons">&nbsp;</li>
+    <li class="DocumentItem sons">&nbsp;</li>
+    <li class="DocumentItem sons">&nbsp;</li>
+    <li class="DocumentItem sons">&nbsp;</li>
+    <li class="DocumentItem sons">&nbsp;</li>
+    <li class="DocumentItem sons">&nbsp;</li>
+    
+    <li class="DocumentItem sons">&nbsp;</li>
+    <li class="DocumentItem sons">&nbsp;</li>
+    <li class="DocumentItem sons">&nbsp;</li>
+    <li class="DocumentItem sons" id="23"><span>Patriot vs. Tory Violence</span></li>
+    <li class="DocumentItem sons">&nbsp;</li>
+    <li class="DocumentItem sons">&nbsp;</li>
+    
+    <li class="DocumentItem sons">&nbsp;</li>
+    <li class="DocumentItem sons">&nbsp;</li>
+    <li class="DocumentItem sons">&nbsp;</li>
+    <li class="DocumentItem sons">&nbsp;</li>
+    <li class="DocumentItem sons" id="24"><span>Governor Moves Assembly</span></li>
+    <li class="DocumentItem">&nbsp;</li>
+    
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem loyalty" id="43"><span>Loyalists Punished</span></li>
+    <li class="DocumentItem loyalty" id="44"><span>Support in Backcountry</span></li>
+    <li class="DocumentItem loyalty" id="45"><span>Thomas Jeramiah Hanged</span></li>
+    <li class="DocumentItem loyalty" id="47"><span>The Snow Campaign</span></li>
+    
+    <li class="DocumentItem loyalty">&nbsp;</li>
+    <li class="DocumentItem loyalty">&nbsp;</li>
+    <li class="DocumentItem loyalty">&nbsp;</li>
+    <li class="DocumentItem loyalty">&nbsp;</li>
+    <li class="DocumentItem loyalty">&nbsp;</li>
+    <li class="DocumentItem loyalty">&nbsp;</li>
+    
+    <li class="DocumentItem loyalty" id="49"><span>Loyalty Oath Turmoil</span></li>
+    <li class="DocumentItem loyalty">&nbsp;</li>
+    <li class="DocumentItem loyalty">&nbsp;</li>
+    <li class="DocumentItem loyalty">&nbsp;</li>
+    <li class="DocumentItem loyalty">&nbsp;</li>
+    <li class="DocumentItem loyalty">&nbsp;</li>
+    
+    <li class="DocumentItem loyalty" id="50"><span>Loyalists Set Fires</span></li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem exile" id="91"><span>Rutledge Escapes Charleston</span></li>
+    <li class="DocumentItem exile" id="92"><span>Patriots Imprisoned</span></li>
+    <li class="DocumentItem exile">&nbsp;</li>
+    <li class="DocumentItem exile">&nbsp;</li>
+    
+    <li class="DocumentItem exile">&nbsp;</li>
+    <li class="DocumentItem exile">&nbsp;</li>
+    <li class="DocumentItem exile">&nbsp;</li>
+    <li class="DocumentItem exile" id="93"><span>Isaac Hayne Hanged</span></li>
+    <li class="DocumentItem exile">&nbsp;</li>
+    <li class="DocumentItem exile">&nbsp;</li>
+    
+    <li class="DocumentItem exile" id="94"><span>Loyalist Estates Confiscated</span></li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    
+
+</ul>
+</div>
+
+<div class="row">
+<ul class="list-inline">
+	<li class="DocumentItem date"><span>1760</span></li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+    
+	<li class="DocumentItem date"><span>1761</span></li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+    
+	<li class="DocumentItem date"><span>1762</span></li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+    
+	<li class="DocumentItem date"><span>1763</span></li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+    
+    <li class="DocumentItem date"><span>1764</span></li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+    
+    <li class="DocumentItem date"><span>1765</span></li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+    
+    <li class="DocumentItem date"><span>1766</span></li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+    
+    <li class="DocumentItem date"><span>1767</span></li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+    
+    <li class="DocumentItem date"><span>1768</span></li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+    
+    <li class="DocumentItem date"><span>1769</span></li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+    
+    <li class="DocumentItem date"><span>1770</span></li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+    
+    <li class="DocumentItem date"><span>1771</span></li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+    
+    <li class="DocumentItem date"><span>1772</span></li>
+    <li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+    
+    <li class="DocumentItem date"><span>1773</span></li>
+    <li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+    
+    <li class="DocumentItem date"><span>1774</span></li>
+    <li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+    
+    <li class="DocumentItem date"><span>1775</span></li>
+    <li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+    
+    <li class="DocumentItem date"><span>1776</span></li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+    
+    <li class="DocumentItem date"><span>1777</span></li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+    
+    <li class="DocumentItem date"><span>1778</span></li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+    
+    <li class="DocumentItem date"><span>1779</span></li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+    
+    <li class="DocumentItem date"><span>1780</span></li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+    
+    <li class="DocumentItem date"><span>1781</span></li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+    
+    <li class="DocumentItem date"><span>1782</span></li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+    <li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+	<li class="DocumentItem">&nbsp;</li>
+    
+</ul>
+</div>
+</div>
+</div>
+</div>
+<style type="text/css">
+
+html, body, .container-table {
+    height: 75%;
+}
+.container-table {
+  	display: table;
+}
+.vertical-center-row {
+    display: table-cell;
+    vertical-align: middle;
+}
+.list-inline {
+    white-space:nowrap;
+       
+}
+
+.DocumentList{
+    overflow-x:scroll;
+    overflow-y:hidden;
+    height:25%;
+    width:100%;
+}
+
+.DocumentItem{
+    width:200px;
+    height:50px;
+    border-width:5px;
+    border-style: solid;
+    border-color:white;
+    word-wrap: break-word;
+    text-align: center;
+    vertical-align: middle;
+
+}
+.date{
+    font-size: 3em;
+    font-weight: bold;
+}
+.cherokee{
+    border-color: brown;
+}
+
+.exile{
+    border-color: green;
+}
+
+.sons{
+    border-color: blue;
+}
+.partisan{
+    border-color: gray;
+}
+.state{
+    border-color: orange;
+}
+.loyalty{
+    border-color: purple;
+}
+.meetings{
+    border-color: red;
+}
+.wilkes{
+    border-color: yellow;
+}
+.end{
+    border-color: brown;
+}
+.prep{
+    border-color: pink;
+}
+.stamps{
+    border-color: green;
+}
+.provincial{
+    border-color: blue;
+}
+.tea{
+    border-color: orange;
+}
+.townsend{
+    border-color: brown;
+}
+.indians{
+    border-color: purple;
+}
+.southern{
+    border-color: red;
+}
+#images{
+    max-height:100%;
+    max-width:100%;
+    overflow-y:scroll;
+}
+</style>
+
+</body>
+</html>
